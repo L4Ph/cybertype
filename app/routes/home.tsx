@@ -1,9 +1,7 @@
-import type { NextPage } from 'next'
 import styles from '../styles/index.module.scss'
 import { Words } from '../components/Words'
 import { KeyStats } from '../components/Keyboard'
 import { useAppState } from '../lib/state'
-import Head from 'next/head'
 import { Nav } from '../components/Nav'
 import { Loader } from '../components/Loader'
 import { DynamicIsland } from '../components/DynamicIsland'
@@ -12,7 +10,8 @@ import { useKeys } from '../hooks/useKeys'
 import { useTypingStarted } from '../hooks/useTyping'
 import { useLocalStorage } from '../lib/localStorage'
 
-const Home: NextPage = () => {
+
+export default function App() {
   const [state, dispatch] = useAppState()
 
   const targetKey =
@@ -30,7 +29,6 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      {AppHead}
       <DynamicIsland state={state} dispatch={dispatch} />
 
       {/* if there is data to show and no other data is being fetched */}
@@ -57,20 +55,3 @@ const Home: NextPage = () => {
   )
 }
 
-const AppHead = (
-  <Head>
-    <title> cybertype </title>
-    <meta name="theme-color" content="#171212" />
-    <meta
-      name="description"
-      content="Fast and Minimal Typing App - Improve your typing speed."
-    />
-    <meta
-      name="keywords"
-      content="cybertype, typing app, practice typing, simple typing app, improve typing speed"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </Head>
-)
-
-export default Home

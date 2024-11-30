@@ -1,9 +1,7 @@
-import { Html, Head, Main, NextScript } from 'next/document'
-
 export default function Document() {
   return (
-    <Html lang="en">
-      <Head>
+    <html lang="en">
+      <head>
         <meta charSet="utf-8" />
 
         {/* pwa manifest */}
@@ -54,7 +52,7 @@ export default function Document() {
 					`
           }}
         ></style>
-      </Head>
+      </head>
       <body data-theme="0">
         <script
           dangerouslySetInnerHTML={{
@@ -67,9 +65,8 @@ export default function Document() {
           }}
         ></script>
 
-        <Main />
+        <main />
       </body>
-      <NextScript />
-    </Html>
+    </html>
   )
 }

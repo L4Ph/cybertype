@@ -1,3 +1,5 @@
+import {test, expect} from "bun:test"
+
 import {
   lowerCaseAlpha,
   row1,
@@ -11,7 +13,7 @@ import {
   row4,
   row4Shift,
   others
-} from '../lib/keys'
+} from '../app/lib/keys'
 
 test('lower case keys are not ignored', () => {
   lowerCaseAlpha.forEach(ch => {
