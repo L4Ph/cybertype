@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef } from 'react'
 import styles from '../styles/Words.module.scss'
-import classnames from 'classnames'
+import { clsx } from 'clsx';
 import { ErrorLocations, Progress } from '../lib/types'
 import { SpaceIcon } from './icons'
 
@@ -74,7 +74,7 @@ const Word = memo(function Word({
 }: WordProps) {
   return (
     <div
-      className={classnames({
+      className={clsx({
         [styles.word]: true,
         [styles.current]: isCurrent,
         [styles.typed]: isTyped
@@ -83,7 +83,7 @@ const Word = memo(function Word({
       {word.split('').map((character, characterIndex) => (
         <span
           key={characterIndex}
-          className={classnames({
+          className={clsx({
             [styles.typed]: characterIndex < activeCharIndex,
             [styles.character]: true,
             [styles.current]: isCurrent && activeCharIndex === characterIndex,

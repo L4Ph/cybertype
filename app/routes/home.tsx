@@ -11,7 +11,7 @@ import { useTypingStarted } from '../hooks/useTyping'
 import { useLocalStorage } from '../lib/localStorage'
 
 
-export default function App() {
+export default function Home() {
   const [state, dispatch] = useAppState()
 
   const targetKey =
