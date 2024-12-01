@@ -48,12 +48,12 @@ export function DynamicIsland({ state, dispatch }: Props) {
           errors={state.totalErrors}
         />
 
-        {/* <DynamicIslandExpander
+        <DynamicIslandExpander
           show={state.showThemes}
           handleClose={closeThemeSwitcher}
           ratio={0.2}
           render={close => <ThemeSwitcher handleClose={close} />}
-        /> */}
+        />
 
         <DynamicIslandExpander
           handleClose={closeDataSelector}

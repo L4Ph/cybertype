@@ -1,4 +1,4 @@
-import { Links, LinksFunction, LoaderFunction, Meta, MetaFunction, Outlet, Scripts, ScrollRestoration, useLoaderData } from 'react-router'
+import { Links, LinksFunction, Meta, MetaFunction, Outlet, Scripts, ScrollRestoration, useLoaderData } from 'react-router'
 import style from "./styles/globals.css?url";
 
 export const links: LinksFunction = () => {
@@ -17,14 +17,14 @@ export const meta: MetaFunction = () => {
   { property:"og:url", content:"https://cybertype.app" },
   { property:"og:type", content: "website"},
   { property:"og:title", content:"cybertype"},
-  { property: "og:description", content:"Fast and Minimal Typing App - Improve your typing speed."},
+  { property:"og:description", content:"Fast and Minimal Typing App - Improve your typing speed."},
   { property:"og:image", content:"https://cybertype.app/og.png"},
   { property:"twitter:card", content:"summary_large_image"},
   { property:"twitter:domain", content:"cybertype.app"},
   { property:"twitter:url", content:"https://cybertype.app"},
-  { property: "twitter:title", content:"cybertype"},
-  { property: "twitter:description", content: "Fast and Minimal Typing App - Improve your typing speed."},
-  { property: "twitter:image", content:"https://cybertype.app/og.png"},
+  { property:"twitter:title", content:"cybertype"},
+  { property:"twitter:description", content: "Fast and Minimal Typing App - Improve your typing speed."},
+  { property:"twitter:image", content:"https://cybertype.app/og.png"},
 ]
 };
 
@@ -34,10 +34,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#171212" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body data-theme="0">
+      {/* <script
+          dangerouslySetInnerHTML={{
+            __html: `
+						const theme = sessionStorage.getItem('theme');
+						if (theme) {
+							document.body.setAttribute('data-theme', theme);
+						}
+					`
+          }}
+        ></script> */}
         {children}
         <ScrollRestoration />
         <Scripts />

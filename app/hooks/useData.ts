@@ -15,7 +15,7 @@ export function useData(dataName: State['dataName'], dispatch: React.Dispatch<Ac
       dispatch({
         type: 'setData',
         dataName: dataName,
-        data: loadedData[dataName] as string[]
+        data: loadedData[dataName] as string[] // 型アサーション
       })
     } else {
       dispatch({ type: 'setFetchingData', data: true })
@@ -24,13 +24,14 @@ export function useData(dataName: State['dataName'], dispatch: React.Dispatch<Ac
 
       fetch(`/json/${fileName}.json`)
         .then(res => res.json())
-        .then(data => {
+        .then((data: unknown) => {
+          const typedData = data as string[] // 型アサーション
+
           if (isCancelled) {
-            // save the data but don't set it
-            loadedData[dataName] = data
+            loadedData[dataName] = typedData
           } else {
             dispatch({ type: 'setFetchingData', data: false })
-            dispatch({ type: 'setData', data, dataName })
+            dispatch({ type: 'setData', data: typedData, dataName })
           }
         })
     }
