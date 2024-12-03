@@ -1,0 +1,68 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "files": { "ignoreUnknown": false, "ignore": [] },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 90,
+    "attributePosition": "auto",
+    "bracketSpacing": true,
+    "include": ["app/**"],
+    "ignore": [".wrangler/**", "node_modules/**", ".react-router/**"]
+  },
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": { "noBlankTarget": "error" },
+      "complexity": {
+        "noBannedTypes": "error",
+        "noUselessTypeConstraint": "error"
+      },
+      "correctness": {
+        "noChildrenProp": "error",
+        "noPrecisionLoss": "error",
+        "noUnusedVariables": "warn",
+        "useArrayLiterals": "off",
+        "useJsxKeyInIterable": "error"
+      },
+      "security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
+      "style": {
+        "noInferrableTypes": "error",
+        "noNamespace": "error",
+        "noNonNullAssertion": "warn",
+        "useAsConstAssertion": "error"
+      },
+      "suspicious": {
+        "noCommentText": "error",
+        "noDuplicateJsxProps": "error",
+        "noEmptyBlockStatements": "error",
+        "noExplicitAny": "warn",
+        "noExtraNonNullAssertion": "error",
+        "noMisleadingInstantiator": "error",
+        "useNamespaceKeyword": "error"
+      }
+    },
+    "include": ["app/**"],
+    "ignore": [".wrangler/**", "node_modules/**", ".react-router/**"]
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "none",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "asNeeded",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    }
+  }
+}

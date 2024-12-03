@@ -1,17 +1,19 @@
+import { expect, test } from 'vitest'
+
 import {
   lowerCaseAlpha,
+  others,
   row1,
-  row2,
-  row3,
   row1Shift,
-  shouldIgnore,
-  upperCaseAlpha,
+  row2,
   row2Shift,
+  row3,
   row3Shift,
   row4,
   row4Shift,
-  others
-} from '../lib/keys'
+  shouldIgnore,
+  upperCaseAlpha
+} from '../app/lib/keys'
 
 test('lower case keys are not ignored', () => {
   lowerCaseAlpha.forEach(ch => {
