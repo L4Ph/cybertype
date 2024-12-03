@@ -1,15 +1,14 @@
-import styles from '../styles/index.module.scss'
-import { Words } from '../components/Words'
-import { KeyStats } from '../components/Keyboard'
-import { useAppState } from '../lib/state'
-import { Nav } from '../components/Nav'
-import { Loader } from '../components/Loader'
 import { DynamicIsland } from '../components/DynamicIsland'
+import { KeyStats } from '../components/Keyboard'
+import { Loader } from '../components/Loader'
+import { Nav } from '../components/Nav'
+import { Words } from '../components/Words'
 import { useData } from '../hooks/useData'
 import { useKeys } from '../hooks/useKeys'
 import { useTypingStarted } from '../hooks/useTyping'
 import { useLocalStorage } from '../lib/localStorage'
-
+import { useAppState } from '../lib/state'
+import styles from '../styles/index.module.scss'
 
 export default function Home() {
   const [state, dispatch] = useAppState()
@@ -54,4 +53,3 @@ export default function Home() {
     </div>
   )
 }
-

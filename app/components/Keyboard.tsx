@@ -1,7 +1,7 @@
-import styles from '../styles/Keyboard.module.scss'
-import { KeyStatRecord } from '../lib/types'
 import { memo, useEffect, useRef } from 'react'
+import type { KeyStatRecord } from '../lib/types'
 import { getSpeed } from '../lib/utils'
+import styles from '../styles/Keyboard.module.scss'
 
 type KeyStatsProps = {
   keyStats: KeyStatRecord

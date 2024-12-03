@@ -1,13 +1,14 @@
-import { Settings } from './Settings'
-import { Stats } from './Stats'
+import type React from 'react'
+import { useRef } from 'react'
+import type { Action, State } from '../lib/types'
 import styles from '../styles/DynamicIsland.module.scss'
-import { State, Action } from '../lib/types'
-import { ThemeSwitcher } from './ThemeSwitcher'
-import React, { useRef } from 'react'
-import { DataSelector } from './DataSelector'
 import { ClientOnly } from './ClientOnly'
-import { closeIcon } from './icons'
+import { DataSelector } from './DataSelector'
+import { Settings } from './Settings'
 import { SoundSelector } from './SoundSelector'
+import { Stats } from './Stats'
+import { ThemeSwitcher } from './ThemeSwitcher'
+import { closeIcon } from './icons'
 
 export type Props = {
   state: State
@@ -129,6 +130,7 @@ function DynamicIslandExpander(props: {
         } as React.CSSProperties
       }
     >
+      {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
       <button aria-label={'close'} className={styles.closeIcon} onClick={handleClose}>
         {closeIcon}
       </button>

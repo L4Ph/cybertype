@@ -32,13 +32,13 @@ export const upperCaseAlpha = lowerCaseAlpha.map(e => e.toUpperCase())
 export const row1 = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=']
 export const row1Shift = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+']
 
-export const row2Shift = ['{', '}', `\\`] //
+export const row2Shift = ['{', '}', '\\'] //
 export const row2 = ['[', ']', '|']
 
 export const row3 = [';', `'`]
 export const row3Shift = [':', '"']
 
-export const row4 = [',', `.`, '/']
+export const row4 = [',', '.', '/']
 export const row4Shift = ['<', '>', '?']
 
 export const others = [' ', 'Enter', 'Backspace', 'ArrowLeft', 'ArrowRight']

@@ -1,5 +1,5 @@
-import { Dispatch } from 'react'
-import { Action } from '../lib/types'
+import type { Dispatch } from 'react'
+import type { Action } from '../lib/types'
 import styles from '../styles/DataSelector.module.scss'
 
 export const dataNameGroups = [
@@ -43,6 +43,7 @@ export function DataSelector({ dispatch, handleClose }: Props) {
           <h3 className={styles.groupTitle}> {dataNameGroup.group} </h3>
           <div className={styles.options}>
             {dataNameGroup.values.map(value => (
+              // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
               <div
                 key={value}
                 className={styles.option}

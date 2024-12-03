@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Espresso */
-[data-theme='0'] {
+[data-theme="0"] {
   --bg: hsl(0deg 12% 8%);
   --secondary: hsl(27deg 31% 70%);
   --tertiary: hsl(0deg 11% 24%);
@@ -46,7 +46,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Campfire */
-[data-theme='1'] {
+[data-theme="1"] {
   --bg: hsl(216deg 5% 21%);
   --tertiary: hsl(216deg 5% 36%);
   --secondary: hsl(24deg 100% 78%);
@@ -62,7 +62,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Classic */
-[data-theme='2'] {
+[data-theme="2"] {
   --bg: hsl(57deg 14% 67%);
   --tertiary: hsl(60deg 14% 76%);
   --secondary: hsl(69deg 8% 10%);
@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* halloween */
-[data-theme='3'] {
+[data-theme="3"] {
   --bg: hsl(311deg 38% 6%);
   --tertiary: hsl(319deg 38% 18%);
   --secondary: hsl(26deg 100% 50%);
@@ -94,7 +94,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* effervescent */
-[data-theme='4'] {
+[data-theme="4"] {
   --bg: hsl(260deg 73% 66%);
   --tertiary: hsl(287deg 100% 80%);
   --secondary: hsl(263deg 35% 7%);
@@ -110,7 +110,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Blackhole */
-[data-theme='5'] {
+[data-theme="5"] {
   --bg: hsl(220deg 20% 3%);
   --tertiary: hsl(220deg 29% 13%);
   --secondary: hsl(221deg 20% 35%);
@@ -126,7 +126,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Serendipity */
-[data-theme='6'] {
+[data-theme="6"] {
   --bg: hsl(0deg 0% 16%);
   --tertiary: hsl(0deg 0% 28%);
   --secondary: hsl(118deg 2% 56%);
@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Elixir */
-[data-theme='7'] {
+[data-theme="7"] {
   --bg: hsl(243deg 55% 14%);
   --tertiary: hsl(257deg 50% 25%);
   --secondary: hsl(236deg 78% 62%);
@@ -158,7 +158,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Eudaemonia */
-[data-theme='8'] {
+[data-theme="8"] {
   --bg: hsl(53deg 7% 75%);
   --tertiary: hsl(53deg 7% 60%);
   --secondary: hsl(195deg 5% 15%);
@@ -174,7 +174,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Tranquillity */
-[data-theme='9'] {
+[data-theme="9"] {
   --bg: hsl(270deg 3% 85%);
   --tertiary: hsl(0deg 0% 100%);
   --secondary: hsl(209deg 10% 50%);
@@ -190,7 +190,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* aesthete */
-[data-theme='10'] {
+[data-theme="10"] {
   --bg: hsl(0deg 0% 13%);
   --tertiary: hsl(0deg 0% 25%);
   --secondary: hsl(20deg 3% 79%);
@@ -206,7 +206,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Sunlit */
-[data-theme='11'] {
+[data-theme="11"] {
   --bg: hsl(210deg 100% 30%);
   --tertiary: hsl(210deg 64% 43%);
   --secondary: hsl(210deg 64% 75%);
@@ -222,7 +222,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* witch craft */
-[data-theme='12'] {
+[data-theme="12"] {
   --bg: hsl(205deg 37% 8%);
   --tertiary: hsl(180deg 41% 17%);
   --secondary: hsl(19deg 75% 57%);
@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* mechanical */
-[data-theme='13'] {
+[data-theme="13"] {
   --bg: hsl(210deg 11% 15%);
   --tertiary: hsl(210deg 10% 23%);
   --secondary: hsl(208deg 7% 46%);
@@ -254,7 +254,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Night Owl */
-[data-theme='14'] {
+[data-theme="14"] {
   --bg: hsl(258deg 53% 7%);
   --tertiary: hsl(241deg 47% 29%);
   --secondary: hsl(232deg 69% 54%);
@@ -270,7 +270,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Forest */
-[data-theme='15'] {
+[data-theme="15"] {
   --bg: hsl(198deg 100% 8%);
   --tertiary: hsl(195deg 100% 18%);
   --secondary: hsl(198deg 10% 55%);

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BeforeInstallPromptEvent } from '../lib/types'
+import type { BeforeInstallPromptEvent } from '../lib/types'
 import styles from '../styles/PWAInstallButton.module.scss'
 import { InstallIcon } from './icons'
 
@@ -9,6 +9,7 @@ export function PWAInstallButton() {
   useEffect(pwaInstallPrompt, [])
 
   return (
+    // biome-ignore lint/a11y/useButtonType: <explanation>
     <button onClick={HideInstallPrompt} className={styles.button}>
       {InstallIcon}
     </button>

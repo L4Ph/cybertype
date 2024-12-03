@@ -1,15 +1,15 @@
-import { Dispatch, memo } from 'react'
-import { Action, State } from '../lib/types'
-import {
-  SoundDisabled,
-  SoundEnabledIcon,
-  ChevronIcon,
-  ThemeIcon,
-  SoundIcon
-} from './icons'
+import { type Dispatch, memo } from 'react'
+import type { Action, State } from '../lib/types'
 import styles from '../styles/Settings.module.scss'
 import { ClientOnly } from './ClientOnly'
 import { PWAInstallButton } from './PWAInstallButton'
+import {
+  ChevronIcon,
+  SoundDisabled,
+  SoundEnabledIcon,
+  SoundIcon,
+  ThemeIcon
+} from './icons'
 
 type SettingsProps = {
   dispatch: Dispatch<Action>
@@ -26,6 +26,7 @@ export const Settings = memo(function Settings({
     <div className={styles.settings}>
       {/* data selector - client only because it is personalized  */}
       <ClientOnly>
+        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div
           className={styles.dataSelector}
           onClick={() => {
@@ -39,6 +40,7 @@ export const Settings = memo(function Settings({
 
       <div className={styles.icons}>
         {/* theme switcher */}
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           aria-label="Change Theme"
           onClick={() => dispatch({ type: 'setShowThemes', data: true })}
@@ -47,6 +49,7 @@ export const Settings = memo(function Settings({
         </button>
 
         {/* sound */}
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           className={styles.sound}
           onClick={() => {
@@ -59,6 +62,7 @@ export const Settings = memo(function Settings({
           </ClientOnly>
         </button>
 
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           onClick={() => dispatch({ type: 'setShowSoundSelector', data: true })}
           aria-label="select key sound"

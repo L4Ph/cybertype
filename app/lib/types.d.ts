@@ -1,4 +1,4 @@
-import { SoundPack } from './sounds'
+import type { SoundPack } from './sounds'
 
 export type Progress = {
   wordIndex: number

@@ -1,14 +1,14 @@
 import { useRef } from 'react'
 import { useImmerReducer } from 'use-immer'
 import {
-  getLocalStorage,
-  dataNameValidator,
   booleanValidator,
+  dataNameValidator,
+  getLocalStorage,
   soundPackValidator
 } from './localStorage'
-import { SoundPack } from './sounds'
-import { State, Action, QuoteData } from './types'
-import { getRandomWords, createEmptyKeyStatRecord } from './utils'
+import type { SoundPack } from './sounds'
+import type { Action, QuoteData, State } from './types'
+import { createEmptyKeyStatRecord, getRandomWords } from './utils'
 
 type LoadedData = Record<State['dataName'], State['data'] | undefined>
 
@@ -118,7 +118,7 @@ function fixErrorsIfCorrected(state: State) {
   const w = state.progress.wordIndex
   const c = state.progress.charIndex
 
-  if (state.errorLocations[w] && state.errorLocations[w][c]) {
+  if (state.errorLocations[w]?.[c]) {
     state.errorLocations[w][c] = false
   }
 }
@@ -192,7 +192,7 @@ function getRandomQuotes(data: QuoteData[], charCount: number) {
 
   while (words.length < wordCount) {
     const i = Math.round(Math.random() * data.length)
-    const newWords = data[i].text.split(' ').map(w => w + ' ')
+    const newWords = data[i].text.split(' ').map(w => `${w} `)
     words.push(...newWords)
   }
   return words
@@ -239,7 +239,7 @@ export function getInitialState(): State {
   ) as SoundPack
 
   const soundEnabled =
-    getLocalStorage('soundEnabled', 'true', booleanValidator) === 'false' ? false : true
+    getLocalStorage('soundEnabled', 'true', booleanValidator) !== 'false'
 
   const dataName = getLocalStorage(
     'dataName',

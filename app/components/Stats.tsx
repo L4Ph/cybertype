@@ -1,5 +1,5 @@
-import styles from '../styles/Stats.module.scss'
 import { getSpeed } from '../lib/utils'
+import styles from '../styles/Stats.module.scss'
 
 type StatsProps = {
   timeTaken: number

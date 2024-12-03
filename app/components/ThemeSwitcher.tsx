@@ -9,8 +9,10 @@ export function ThemeSwitcher({ handleClose }: { handleClose: () => void }) {
     <div className={styles.themeSwitcher}>
       {themes.map((theme, i) => {
         return (
+          // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
           <div
             data-theme={i}
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={i}
             onClick={() => {
               handleClose()
@@ -19,7 +21,7 @@ export function ThemeSwitcher({ handleClose }: { handleClose: () => void }) {
             className={styles.theme}
           >
             <h3> {theme.name}</h3>
-            <div className={styles.palette}></div>
+            <div className={styles.palette} />
           </div>
         )
       })}

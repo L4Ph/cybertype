@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { dataNameGroups } from '../components/DataSelector'
 import { soundPacks } from './sounds'
-import { State } from './types'
+import type { State } from './types'
 
 export function getLocalStorage(
   key: string,
@@ -16,7 +16,7 @@ export function getLocalStorage(
     // fix local storage value
     setLocalStorage(key, defaultValue)
     return defaultValue
-  } catch (error) {
+  } catch (_error) {
     return defaultValue
   }
 }
@@ -44,7 +44,9 @@ export const booleanValidator = (str: string) => {
 
 const validDataNames: Set<string> = new Set()
 
+// biome-ignore lint/complexity/noForEach: <explanation>
 dataNameGroups.forEach(group => {
+  // biome-ignore lint/complexity/noForEach: <explanation>
   group.values.forEach(value => {
     validDataNames.add(value)
   })

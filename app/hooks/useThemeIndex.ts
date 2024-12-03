@@ -28,7 +28,7 @@ function getInitialTheme() {
 
   const index = Number(valueFromSessionStorage)
 
-  if (isNaN(index) || index < 0 || index >= themes.length) {
+  if (Number.isNaN(index) || index < 0 || index >= themes.length) {
     sessionStorage.setItem('theme', '0')
     return 0
   }
@@ -37,12 +37,12 @@ function getInitialTheme() {
 }
 
 function applyTheme(themeIndex: number) {
-  document.body.setAttribute('data-theme', themeIndex + '')
+  document.body.setAttribute('data-theme', `${themeIndex}`)
 
   const meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement
   meta.setAttribute('content', themes[themeIndex].bar)
 
-  sessionStorage.setItem('theme', themeIndex + '')
+  sessionStorage.setItem('theme', `${themeIndex}`)
 }
 
 export function useThemeIndex() {

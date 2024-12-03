@@ -1,6 +1,6 @@
-import { GithubIcon, twitterIcon } from './icons'
-import styles from '../styles/Nav.module.scss'
 import { memo } from 'react'
+import styles from '../styles/Nav.module.scss'
+import { GithubIcon, twitterIcon } from './icons'
 
 export const Nav = memo(function Nav() {
   return (

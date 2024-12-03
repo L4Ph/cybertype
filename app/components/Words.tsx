@@ -1,7 +1,7 @@
+import { clsx } from 'clsx'
 import { memo, useEffect, useRef } from 'react'
+import type { ErrorLocations, Progress } from '../lib/types'
 import styles from '../styles/Words.module.scss'
-import { clsx } from 'clsx';
-import { ErrorLocations, Progress } from '../lib/types'
 import { SpaceIcon } from './icons'
 
 type WordsProps = {
@@ -33,7 +33,7 @@ export function Words({ words, progress, errorLocations }: WordsProps) {
 
       const top = activeWordEl.getBoundingClientRect().top
       const wordsTop = wordsRef.current.getBoundingClientRect().top
-      wordsRef.current.style.setProperty('--depth', wordsTop - top + 'px')
+      wordsRef.current.style.setProperty('--depth', `${wordsTop - top}px`)
     }, 50)
   })
 
@@ -43,6 +43,7 @@ export function Words({ words, progress, errorLocations }: WordsProps) {
         <div className={styles.words} ref={wordsRef}>
           {words.map((word, wordIndex) => (
             <Word
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               key={wordIndex}
               word={word}
               isTyped={progress.wordIndex > wordIndex}
@@ -82,6 +83,7 @@ const Word = memo(function Word({
     >
       {word.split('').map((character, characterIndex) => (
         <span
+          // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           key={characterIndex}
           className={clsx({
             [styles.typed]: characterIndex < activeCharIndex,

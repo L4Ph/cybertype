@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 // This file is not used right now, but it will be used later when adding support for mobile
 

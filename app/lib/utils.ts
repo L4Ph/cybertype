@@ -1,5 +1,5 @@
 import { heatmapKeys } from './keys'
-import { KeyStatRecord } from './types'
+import type { KeyStatRecord } from './types'
 
 export function getSpeed(words: number, time: number) {
   return words === 0 || time === 0 ? 0 : Math.round((words / time) * 60 * 1000)
@@ -7,6 +7,7 @@ export function getSpeed(words: number, time: number) {
 
 export function createEmptyKeyStatRecord() {
   const value: KeyStatRecord = {}
+  // biome-ignore lint/complexity/noForEach: <explanation>
   heatmapKeys.forEach(key => {
     value[key] = {
       count: 0,
@@ -24,7 +25,7 @@ export function getRandomWords(data: string[], count: number) {
   while (chars < count) {
     const randomIndex = Math.floor(Math.random() * data.length)
     chars += data[randomIndex].length
-    words.push(data[randomIndex] + ' ')
+    words.push(`${data[randomIndex]} `)
   }
 
   return words

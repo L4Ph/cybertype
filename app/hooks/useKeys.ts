@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { shouldIgnore } from '../lib/keys'
-import { getSounds, SoundPack, Sounds } from '../lib/sounds'
-import { Action } from '../lib/types'
+import { type SoundPack, type Sounds, getSounds } from '../lib/sounds'
+import type { Action } from '../lib/types'
 
 export function useKeys(
   targetKey: string,
@@ -16,6 +16,7 @@ export function useKeys(
     soundsRef.current = getSounds()
   }
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (ignore) return
 

@@ -1,5 +1,5 @@
-import { SoundPack, soundPacks } from '../lib/sounds'
-import { Action } from '../lib/types'
+import { type SoundPack, soundPacks } from '../lib/sounds'
+import type { Action } from '../lib/types'
 import styles from '../styles/SoundSelector.module.scss'
 import { DoneIcon } from './icons'
 
@@ -14,6 +14,7 @@ export function SoundSelector(props: Props) {
     <div className={styles.options}>
       {soundPacks.map(soundPack => {
         return (
+          // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
           <div
             key={soundPack.id}
             className={styles.option}

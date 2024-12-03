@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { loadedData } from '../lib/state'
-import { Action, State } from '../lib/types'
+import type { Action, State } from '../lib/types'
 
 function dataNameToFileName(dataName: string) {
   if (dataName === 'C#') return 'csharp'
